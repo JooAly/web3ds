@@ -18,10 +18,17 @@
 
     var orderId = params.orderId
     var txnId = params.txnId;
+    var sessionId = params.sessionId;
+
+    console.log("orderId: ", orderId,
+      "\ntxnId: ",
+      txnId,
+      "\nsessionId: ",
+      sessionId);
 
     ThreeDS.configure({
       merchantId: "TESTTELDA",
-      sessionId: params.sessionId,
+      sessionId: sessionId,
       containerId: "main-div",
       callback: function () {
         if (ThreeDS.isConfigured())
